@@ -28,10 +28,10 @@ public class frmInicio extends javax.swing.JFrame {
     private void initComponents() {
 
         lblTitulo = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblCuadro = new javax.swing.JLabel();
+        lblTriangulo = new javax.swing.JLabel();
+        lblCirculo = new javax.swing.JLabel();
+        lblRombo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -39,13 +39,13 @@ public class frmInicio extends javax.swing.JFrame {
         lblTitulo.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         lblTitulo.setText("ÁREA DE FIGURAS GEOMÉTRICAS");
 
-        jLabel1.setText("jLabel1");
+        lblCuadro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cuadrado.png"))); // NOI18N
 
-        jLabel2.setText("jLabel2");
+        lblTriangulo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/triangulo.png"))); // NOI18N
 
-        jLabel3.setText("jLabel3");
+        lblCirculo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/circulo.png"))); // NOI18N
 
-        jLabel4.setText("jLabel4");
+        lblRombo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rombo.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -54,16 +54,16 @@ public class frmInicio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(lblTitulo))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel3)))))
+                            .addComponent(lblCuadro, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(lblCirculo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblTriangulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblRombo, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(253, 253, 253)
+                        .addComponent(lblTitulo)))
                 .addContainerGap(276, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -72,14 +72,14 @@ public class frmInicio extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(lblTitulo)
                 .addGap(40, 40, 40)
-                .addComponent(jLabel1)
-                .addGap(73, 73, 73)
-                .addComponent(jLabel2)
-                .addGap(77, 77, 77)
-                .addComponent(jLabel3)
-                .addGap(98, 98, 98)
-                .addComponent(jLabel4)
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addComponent(lblCuadro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblTriangulo)
+                .addGap(37, 37, 37)
+                .addComponent(lblCirculo)
+                .addGap(31, 31, 31)
+                .addComponent(lblRombo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -121,10 +121,10 @@ public class frmInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel lblCirculo;
+    private javax.swing.JLabel lblCuadro;
+    private javax.swing.JLabel lblRombo;
     private javax.swing.JLabel lblTitulo;
+    private javax.swing.JLabel lblTriangulo;
     // End of variables declaration//GEN-END:variables
 }
