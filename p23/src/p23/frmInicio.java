@@ -32,6 +32,26 @@ public class frmInicio extends javax.swing.JFrame {
         lblTriangulo = new javax.swing.JLabel();
         lblCirculo = new javax.swing.JLabel();
         lblRombo = new javax.swing.JLabel();
+        lblLadoCua = new javax.swing.JLabel();
+        lblBaseT = new javax.swing.JLabel();
+        lblRadio = new javax.swing.JLabel();
+        lblDMayor = new javax.swing.JLabel();
+        txtLado = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        txtBase = new javax.swing.JTextField();
+        txtAltura = new javax.swing.JTextField();
+        lblDMenor = new javax.swing.JLabel();
+        txtRadio = new javax.swing.JTextField();
+        txtDMayor = new javax.swing.JTextField();
+        txtDMenor = new javax.swing.JTextField();
+        btnCalcularCua = new javax.swing.JButton();
+        btnCalcularT = new javax.swing.JButton();
+        btnCalcularCir = new javax.swing.JButton();
+        btnCalcularRom = new javax.swing.JButton();
+        lblAreaCua = new javax.swing.JLabel();
+        lblAreaT = new javax.swing.JLabel();
+        lblAreaCir = new javax.swing.JLabel();
+        lblAreaRom = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -47,6 +67,50 @@ public class frmInicio extends javax.swing.JFrame {
 
         lblRombo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rombo.png"))); // NOI18N
 
+        lblLadoCua.setText("Lado");
+
+        lblBaseT.setText("Base");
+
+        lblRadio.setText("Radio");
+
+        lblDMayor.setText("Diagonal Mayor");
+
+        txtLado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLadoActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("Altura");
+
+        lblDMenor.setText("Diagonal Menor");
+
+        btnCalcularCua.setText("Calcular");
+        btnCalcularCua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularCuaActionPerformed(evt);
+            }
+        });
+
+        btnCalcularT.setText("Calcular");
+        btnCalcularT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularTActionPerformed(evt);
+            }
+        });
+
+        btnCalcularCir.setText("Calcular");
+
+        btnCalcularRom.setText("Calcular");
+
+        lblAreaCua.setText("ÁREA");
+
+        lblAreaT.setText("ÁREA");
+
+        lblAreaCir.setText("ÁREA");
+
+        lblAreaRom.setText("ÁREA");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -55,35 +119,147 @@ public class frmInicio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblCuadro, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCuadro)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(lblCirculo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lblTriangulo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(lblRombo, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addComponent(lblRombo))
+                        .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lblBaseT)
+                                            .addComponent(lblDMayor)
+                                            .addComponent(txtDMayor, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(112, 112, 112))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(txtRadio, javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtBase))
+                                        .addGap(127, 127, 127)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtDMenor, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnCalcularRom))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(btnCalcularT, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(btnCalcularCir, javax.swing.GroupLayout.Alignment.TRAILING)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblDMenor)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblAreaRom)
+                                        .addGap(22, 22, 22))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblAreaT)
+                                        .addGap(25, 25, 25))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtLado, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnCalcularCua))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblRadio)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblAreaCir)
+                                .addGap(25, 25, 25))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblLadoCua, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblAreaCua)
+                                .addGap(28, 28, 28))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(253, 253, 253)
                         .addComponent(lblTitulo)))
-                .addContainerGap(276, Short.MAX_VALUE))
+                .addGap(59, 59, 59))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(lblTitulo)
-                .addGap(40, 40, 40)
-                .addComponent(lblCuadro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblTriangulo)
-                .addGap(37, 37, 37)
-                .addComponent(lblCirculo)
-                .addGap(31, 31, 31)
-                .addComponent(lblRombo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(lblCuadro))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnCalcularCua)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblLadoCua)
+                                    .addComponent(lblAreaCua))
+                                .addGap(18, 18, 18)
+                                .addComponent(txtLado, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblTriangulo)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnCalcularT)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblBaseT)
+                                .addComponent(jLabel5)
+                                .addComponent(lblAreaT))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtBase, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)
+                                .addComponent(txtAltura)))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(lblCirculo))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnCalcularCir)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblRadio)
+                                    .addComponent(lblAreaCir))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRombo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnCalcularRom)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(lblDMayor)
+                                .addComponent(lblDMenor)
+                                .addComponent(lblAreaRom))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtDMayor, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                                .addComponent(txtDMenor)))))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtLadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLadoActionPerformed
+        
+    }//GEN-LAST:event_txtLadoActionPerformed
+
+    private void btnCalcularCuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularCuaActionPerformed
+        double lado = Double.parseDouble(txtLado.getText());
+        lado = lado * lado;
+        lblAreaCua.setText(String.valueOf(lado));
+    }//GEN-LAST:event_btnCalcularCuaActionPerformed
+
+    private void btnCalcularTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCalcularTActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,10 +297,30 @@ public class frmInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalcularCir;
+    private javax.swing.JButton btnCalcularCua;
+    private javax.swing.JButton btnCalcularRom;
+    private javax.swing.JButton btnCalcularT;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel lblAreaCir;
+    private javax.swing.JLabel lblAreaCua;
+    private javax.swing.JLabel lblAreaRom;
+    private javax.swing.JLabel lblAreaT;
+    private javax.swing.JLabel lblBaseT;
     private javax.swing.JLabel lblCirculo;
     private javax.swing.JLabel lblCuadro;
+    private javax.swing.JLabel lblDMayor;
+    private javax.swing.JLabel lblDMenor;
+    private javax.swing.JLabel lblLadoCua;
+    private javax.swing.JLabel lblRadio;
     private javax.swing.JLabel lblRombo;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblTriangulo;
+    private javax.swing.JTextField txtAltura;
+    private javax.swing.JTextField txtBase;
+    private javax.swing.JTextField txtDMayor;
+    private javax.swing.JTextField txtDMenor;
+    private javax.swing.JTextField txtLado;
+    private javax.swing.JTextField txtRadio;
     // End of variables declaration//GEN-END:variables
 }
